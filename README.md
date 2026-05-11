@@ -114,12 +114,11 @@
         </div>
         <p>Where:</p>
         <ul>
-            <li><strong>$t$:</strong> Time measured by the stationary observer (dilated time).</li>
-            <li><strong>$t_0$:</strong> Proper time (measured by the person moving).</li>
-            <li><strong>$v$:</strong> Velocity of the moving object.</li>
-            <li><strong>$c$:</strong> The speed of light.</li>
+            <li><strong>t:</strong> Time measured by the stationary observer (dilated time).</li>
+            <li><strong>t_0:</strong> Proper time (measured by the person moving).</li>
+            <li><strong>v:</strong> Velocity of the moving object.</li>
+            <li><strong>c:</strong> The speed of light.</li>
         </ul>
-
 
 <section id="animation-container" style="text-align: center;">
     <h2>The Light Clock Experiment</h2>

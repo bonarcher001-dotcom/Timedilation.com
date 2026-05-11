@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,9 +35,9 @@
             text-transform: uppercase;
             letter-spacing: 4px;
         }
-        /* UPDATED: Removed the white tint to make it transparent */
         .card {
-            background: transparent; 
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             padding: 30px;
@@ -62,12 +61,10 @@
             color: var(--accent-blue);
             font-weight: bold;
         }
-        /* UPDATED: Table is now fully transparent */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
-            background-color: transparent;
         }
         th, td {
             padding: 15px;
@@ -103,21 +100,21 @@
             <li><strong>At Rest:</strong> The light travels a straight vertical path.</li>
             <li><strong>In Motion:</strong> To an outside observer, the light must travel a <span class="highlight">diagonal path</span> to catch up with the moving mirrors.</li>
         </ul>
-        <p>Since the speed of light ($c$) is constant and the diagonal path is longer, the clock <em>must</em> take more time to complete one tick. Thus, time stretches!</p>
+        <p>Since the speed of light (c) is constant and the diagonal path is longer, the clock <em>must</em> take more time to complete one tick. Thus, time stretches!</p>
     </section>
 
     <section class="card">
         <h2>The Math</h2>
-        <p>We use the Lorentz Factor ($\gamma$) to calculate exactly how much time dilates:</p>
+        <p>We use the Lorentz Factor (\gamma) to calculate exactly how much time dilates:</p>
         <div class="formula-box">
             $$t = \frac{t_0}{\sqrt{1 - \frac{v^2}{c^2}}}$$
         </div>
         <p>Where:</p>
         <ul>
-            <li><strong>$t$:</strong> Time measured by the stationary observer (dilated time).</li>
-            <li><strong>$t_0$:</strong> Proper time (measured by the person moving).</li>
-            <li><strong>$v$:</strong> Velocity of the moving object.</li>
-            <li><strong>$c$:</strong> The speed of light.</li>
+            <li><strong>t:</strong> Time measured by the stationary observer (dilated time).</li>
+            <li><strong>t_0:</strong> Proper time (measured by the person moving).</li>
+            <li><strong>v:</strong> Velocity of the moving object.</li>
+            <li><strong>c:</strong> The speed of light.</li>
         </ul>
     </section>
     

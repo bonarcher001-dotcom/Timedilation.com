@@ -6,9 +6,9 @@
     <title>Time Dilation | Special Relativity Explained</title>
     <style>
         :root {
-            --space-dark: #0b0d17;
+            --space-dark: #ffffff;
             --star-white: #000000;
-            --accent-blue: #4cc9f0;
+            --accent-blue: #0077b6;
             --accent-purple: #7209b7;
         }
         body {

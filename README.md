@@ -70,7 +70,7 @@
     <p>
             Before Albert Einstein, the world believed time was "absolute"—a universal clock that ticked at the exact same rate for everyone, everywhere. 
             Einstein’s breakthrough was the realization that time is not a separate background; it is the <strong>fourth dimension</strong>, 
-            intimately woven together with space to form a single fabric called <span class="highlight">spacetime</span>.
+            intimately woven together with space to form a single fabric called spacetime.
         </p>
 </header>
 

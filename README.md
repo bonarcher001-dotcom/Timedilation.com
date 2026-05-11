@@ -100,12 +100,12 @@
             <li><strong>At Rest:</strong> The light travels a straight vertical path.</li>
             <li><strong>In Motion:</strong> To an outside observer, the light must travel a <span class="highlight">diagonal path</span> to catch up with the moving mirrors.</li>
         </ul>
-        <p>Since the speed of light (c) is constant and the diagonal path is longer, the clock <em>must</em> take more time to complete one tick. Thus, time stretches!</p>
+        <p>Since the speed of light ($c$) is constant and the diagonal path is longer, the clock <em>must</em> take more time to complete one tick. Thus, time stretches!</p>
     </section>
 
     <section class="card">
         <h2>The Math</h2>
-        <p>We use the Lorentz Factor (\gamma) to calculate exactly how much time dilates:</p>
+        <p>We use the Lorentz Factor ($\gamma$) to calculate exactly how much time dilates:</p>
         <div class="formula-box">
             $$t = \frac{t_0}{\sqrt{1 - \frac{v^2}{c^2}}}$$
         </div>

@@ -15,7 +15,7 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.7;
             color: var(--star-white);
-            background-color: var(--space-dark:);
+            background-color: var(--space-dark);
             margin: 0;
             padding: 0;
         }
@@ -49,7 +49,7 @@
             padding-left: 15px;
         }
         .formula-box {
-            background: #000;
+            background: var(--star-white);
             padding: 20px;
             border-radius: 10px;
             text-align: center;

@@ -90,7 +90,7 @@
 <div class="container">
     <section class="card">
         <h2>What is Time Dilation?</h2>
-        <p>In simple terms, <strong>Time Dilation</strong> is the difference in the elapsed time measured by two observers. According to Einstein, time is not a "universal clock" that ticks the same for everyone. Instead, time <span class="highlight">slows down</span> for an object the faster it moves through space.</p>
+        <p>In simple terms, <strong>Time Dilation</strong> is the difference in the elapsed time measured by two observers. According to Einstein, time is not a "universal clock" that ticks the same for everyone. Instead, time slows down for an object the faster it moves through space.</p>
     </section>
 
     <section class="card">
@@ -98,7 +98,7 @@
         <p>Imagine a clock that works by bouncing a beam of light between two mirrors. One "tick" is the time it takes for light to go up and down.</p>
         <ul>
             <li><strong>At Rest:</strong> The light travels a straight vertical path.</li>
-            <li><strong>In Motion:</strong> To an outside observer, the light must travel a diagonal path</span> to catch up with the moving mirrors.</li>
+            <li><strong>In Motion:</strong> To an outside observer, the light must travel a diagonal path to catch up with the moving mirrors.</li>
         </ul>
         <p>Since the speed of light (c) is constant and the diagonal path is longer, the clock <em>must</em> take more time to complete one tick. Thus, time stretches!</p>
     </section>
@@ -107,7 +107,7 @@
         <h2>The Math</h2>
         <p>We use the Lorentz Factor (\gamma) to calculate exactly how much time dilates:</p>
         <div class="formula-box">
-            t = \frac{t_0}{\sqrt{1 - \frac{v^2}{c^2}}}$$
+            $$t = \frac{t_0}{\sqrt{1 - \frac{v^2}{c^2}}}$$
         </div>
         <p>Where:</p>
         <ul>
@@ -151,7 +151,7 @@
 </div>
 
 <footer>
-    <p>Physics Lab &copy; 2026 | Built for Future Physicists</p>
+    <p>Created by CHMSU TALISAY BSED SCIENCE - 3A &copy; 2026 | Built for Future Physicists</p>
 </footer>
 
 <!-- MathJax for rendering the LaTeX formula -->

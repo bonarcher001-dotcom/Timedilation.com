@@ -121,10 +121,6 @@
         </ul>
 
 
-<footer>
-    <p>Created by CHMSU TALISAY BSED SCIENCE - 3A &copy; 2026 | Built for Future Physicists</p>
-</footer>
-
 <section id="animation-container" style="text-align: center;">
     <h2>The Light Clock Experiment</h2>
     <p>Observe how light travels a longer, diagonal path when the clock is in motion. Because the speed of light cannot change, the clock must "tick" more slowly to cover that extra distance.</p>
@@ -235,4 +231,8 @@
         <p>Imagine a clock that works by bouncing a beam of light between two mirrors. One "tick" is the time it takes for light to go up and down.</p>
         <ul>
             <li><strong>At Rest:</strong> The light travels a straight vertical path.</li>
-            <li><strong>In Motion:</strong> To an outside observer, the light must travel a
+            <li><strong>In Motion:</strong> To an outside observer, the light must travel a diagonal path to catch up with the moving mirrors.</li>
+
+            <footer>
+    <p>Created by CHMSU TALISAY BSED SCIENCE - 3A &copy; 2026 | Built for Future Physicists</p>
+</footer>

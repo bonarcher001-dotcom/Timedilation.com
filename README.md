@@ -87,48 +87,7 @@
     }
 </style>
        
-    }
-</style>
-        }
-        h2 {
-            color: var(--accent-blue);
-            border-left: 4px solid var(--accent-purple);
-            padding-left: 15px;
-        }
-        .formula-box {
-            background: #000;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 1.4rem;
-            border: 1px solid var(--accent-purple);
-            margin: 20px 0;
-        }
-        .highlight {
-            color: var(--accent-blue);
-            font-weight: bold;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        th { color: var(--accent-blue); }
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.8rem;
-            opacity: 0.6;
-        }
-    </style>
-</head>
-<body>
-
+ 
 <header>
     <h1>Time Dilation</h1>
     <p>Moving through space changes your journey through time.</p>

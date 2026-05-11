@@ -37,8 +37,7 @@
             letter-spacing: 4px;
         }
         .card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
+            background: transparent; 
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             padding: 30px;
@@ -66,6 +65,7 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            background-color: transparent;
         }
         th, td {
             padding: 15px;
@@ -73,6 +73,26 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         th { color: var(--accent-blue); }
+        
+        /* Animation Styling */
+        #animation-container button {
+            padding: 10px 20px; 
+            background: var(--accent-blue); 
+            border: none; 
+            cursor: pointer; 
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        #animation-container button:hover {
+            background: var(--accent-purple);
+            color: white;
+        }
+        input[type=range] {
+            cursor: pointer;
+            accent-color: var(--accent-blue);
+        }
+
         footer {
             text-align: center;
             padding: 40px;
@@ -91,32 +111,112 @@
 <div class="container">
     <section class="card">
         <h2>What is Time Dilation?</h2>
-        <p>In simple terms, <strong>Time Dilation</strong> is the difference in the elapsed time measured by two observers. According to Einstein, time is not a "universal clock" that ticks the same for everyone. Instead, time <span class="highlight">slows down</span> for an object the faster it moves through space.</p>
+        <p>In simple terms, <strong>Time Dilation</strong> is the difference in the elapsed time measured by two observers. According to Einstein, time slows down for an object the faster it moves through space.</p>
     </section>
 
-    <section class="card">
+    <section class="card" id="animation-container" style="text-align: center;">
         <h2>The Light Clock Experiment</h2>
-        <p>Imagine a clock that works by bouncing a beam of light between two mirrors. One "tick" is the time it takes for light to go up and down.</p>
-        <ul>
-            <li><strong>At Rest:</strong> The light travels a straight vertical path.</li>
-            <li><strong>In Motion:</strong> To an outside observer, the light must travel a <span class="highlight">diagonal path</span> to catch up with the moving mirrors.</li>
-        </ul>
-        <p>Since the speed of light ($c$) is constant and the diagonal path is longer, the clock <em>must</em> take more time to complete one tick. Thus, time stretches!</p>
+        <p>Observe how light travels a longer, diagonal path when the clock is in motion. Because the speed of light cannot change, the clock must "tick" more slowly to cover that extra distance.</p>
+        
+        <canvas id="lightClockCanvas" width="800" height="300" style="background: #000; border: 1px solid var(--accent-blue); width: 100%; max-width: 800px; border-radius: 10px;"></canvas>
+        
+        <div style="margin-top: 20px;">
+            <button onclick="toggleAnimation()" id="startBtn">Pause / Resume</button>
+            <span style="margin-left: 20px; font-weight: bold;">
+                Velocity (v): <input type="range" id="speedRange" min="0" max="0.9" step="0.01" value="0.5"> 
+                <span id="speedVal" style="color: var(--accent-blue);">0.5</span>c
+            </span>
+        </div>
+
+        <script>
+            const canvas = document.getElementById('lightClockCanvas');
+            const ctx = canvas.getContext('2d');
+            const speedRange = document.getElementById('speedRange');
+            const speedVal = document.getElementById('speedVal');
+            
+            let isRunning = true;
+            let time = 0;
+            const L = 80; 
+            const c = 3;  
+            
+            function toggleAnimation() {
+                isRunning = !isRunning;
+            }
+
+            function draw() {
+                if (isRunning) {
+                    time += 0.5;
+                }
+
+                const v = parseFloat(speedRange.value);
+                speedVal.innerText = v;
+
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                ctx.fillStyle = "#4cc9f0";
+                ctx.font = "bold 16px Inter";
+                ctx.fillText("Stationary Observer (Frame A)", 50, 40);
+                ctx.fillText("Moving Observer (Frame B)", 450, 40);
+
+                const x1 = 150;
+                const y_top = 100;
+                const y_bot = 100 + (2 * L);
+                
+                ctx.strokeStyle = "#7209b7";
+                ctx.lineWidth = 3;
+                ctx.strokeRect(x1-30, y_top-5, 60, 5); 
+                ctx.strokeRect(x1-30, y_bot, 60, 5);  
+
+                let photonY = y_bot - (Math.abs((time * c) % (2 * L) - L));
+                if (((time * c) % (4 * L)) > 2 * L) { 
+                    photonY = y_top + (Math.abs((time * c) % (2 * L) - L));
+                }
+                
+                ctx.beginPath();
+                ctx.arc(x1, photonY, 6, 0, Math.PI * 2);
+                ctx.fillStyle = "yellow";
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = "yellow";
+                ctx.fill();
+                ctx.shadowBlur = 0;
+
+                const x2_base = 500;
+                const horizontalShift = (time * v * 2) % 250; 
+                const x2 = x2_base + horizontalShift;
+
+                ctx.strokeStyle = "#7209b7";
+                ctx.strokeRect(x2-30, y_top-5, 60, 5); 
+                ctx.strokeRect(x2-30, y_bot, 60, 5);
+
+                const period = (2 * L) / Math.sqrt(c*c - v*v);
+                let movingPhotonY;
+                const phase = (time) % (2 * period);
+                
+                if (phase < period) {
+                    movingPhotonY = y_bot - (phase / period) * (2 * L);
+                } else {
+                    movingPhotonY = y_top + ((phase - period) / period) * (2 * L);
+                }
+
+                ctx.beginPath();
+                ctx.arc(x2, movingPhotonY, 6, 0, Math.PI * 2);
+                ctx.fillStyle = "yellow";
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = "yellow";
+                ctx.fill();
+                ctx.shadowBlur = 0;
+
+                requestAnimationFrame(draw);
+            }
+            draw();
+        </script>
     </section>
 
     <section class="card">
         <h2>The Math</h2>
-        <p>We use the Lorentz Factor ($\gamma$) to calculate exactly how much time dilates:</p>
         <div class="formula-box">
             $$t = \frac{t_0}{\sqrt{1 - \frac{v^2}{c^2}}}$$
         </div>
-        <p>Where:</p>
-        <ul>
-            <li><strong>$t$:</strong> Time measured by the stationary observer (dilated time).</li>
-            <li><strong>$t_0$:</strong> Proper time (measured by the person moving).</li>
-            <li><strong>$v$:</strong> Velocity of the moving object.</li>
-            <li><strong>$c$:</strong> The speed of light.</li>
-        </ul>
     </section>
 
     <section class="card">
@@ -155,113 +255,8 @@
     <p>Physics Lab &copy; 2026 | Built for Future Physicists</p>
 </footer>
 
-<!-- MathJax for rendering the LaTeX formula -->
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </body>
 </html>
-
-<section id="animation-container" style="text-align: center;">
-    <h2>The Light Clock Experiment</h2>
-    <p>Observe how light travels a longer, diagonal path when the clock is in motion. Because the speed of light cannot change, the clock must "tick" more slowly to cover that extra distance.</p>
-    
-    <canvas id="lightClockCanvas" width="800" height="300" style="background: #000; border: 1px solid #00d4ff; width: 100%; max-width: 800px;"></canvas>
-    
-    <div style="margin-top: 15px;">
-        <button onclick="toggleAnimation()" id="startBtn" style="padding: 10px 20px; background: #00d4ff; border: none; cursor: pointer; font-weight: bold;">Pause/Resume</button>
-        <span style="margin-left: 20px;">Velocity (v): <input type="range" id="speedRange" min="0" max="0.9" step="0.01" value="0.5"> <span id="speedVal">0.5</span>c</span>
-    </div>
-
-    <script>
-        const canvas = document.getElementById('lightClockCanvas');
-        const ctx = canvas.getContext('2d');
-        const speedRange = document.getElementById('speedRange');
-        const speedVal = document.getElementById('speedVal');
-        
-        let isRunning = true;
-        let time = 0;
-        const L = 80; // Distance between mirrors
-        const c = 3;  // Constant speed of light
-        
-        function toggleAnimation() {
-            isRunning = !isRunning;
-        }
-
-        function draw() {
-            if (isRunning) {
-                time += 0.5;
-            }
-
-            const v = parseFloat(speedRange.value);
-            speedVal.innerText = v;
-
-            // Clear Canvas
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // Labels
-            ctx.fillStyle = "#00d4ff";
-            ctx.font = "16px Arial";
-            ctx.fillText("Stationary Observer (Frame A)", 50, 40);
-            ctx.fillText("Moving Observer (Frame B)", 450, 40);
-
-            // Draw Stationary Clock
-            const x1 = 150;
-            const y_top = 100;
-            const y_bot = 100 + (2 * L);
-            
-            ctx.strokeStyle = "#444";
-            ctx.strokeRect(x1-30, y_top-5, 60, 5); // Top mirror
-            ctx.strokeRect(x1-30, y_bot, 60, 5);   // Bottom mirror
-
-            // Stationary Photon Logic
-            let photonY = y_bot - (Math.abs((time * c) % (2 * L) - L));
-            if (((time * c) % (4 * L)) > 2 * L) { // Moving up/down logic
-                photonY = y_top + (Math.abs((time * c) % (2 * L) - L));
-            }
-            
-            // Draw Photon A
-            ctx.beginPath();
-            ctx.arc(x1, photonY, 5, 0, Math.PI * 2);
-            ctx.fillStyle = "yellow";
-            ctx.shadowBlur = 15;
-            ctx.shadowColor = "yellow";
-            ctx.fill();
-            ctx.shadowBlur = 0;
-
-            // Draw Moving Clock
-            const x2_base = 500;
-            const horizontalShift = (time * v * 2) % 250; 
-            const x2 = x2_base + horizontalShift;
-
-            ctx.strokeStyle = "#444";
-            ctx.strokeRect(x2-30, y_top-5, 60, 5); 
-            ctx.strokeRect(x2-30, y_bot, 60, 5);
-
-            // Moving Photon Path (The Zig-Zag)
-            // In the moving frame, light still moves at c, but covers a diagonal
-            const period = (2 * L) / Math.sqrt(c*c - v*v);
-            let movingPhotonY;
-            const phase = (time) % (2 * period);
-            
-            if (phase < period) {
-                movingPhotonY = y_bot - (phase / period) * (2 * L);
-            } else {
-                movingPhotonY = y_top + ((phase - period) / period) * (2 * L);
-            }
-
-            // Draw Photon B
-            ctx.beginPath();
-            ctx.arc(x2, movingPhotonY, 5, 0, Math.PI * 2);
-            ctx.fillStyle = "yellow";
-            ctx.shadowBlur = 15;
-            ctx.shadowColor = "yellow";
-            ctx.fill();
-            ctx.shadowBlur = 0;
-
-            requestAnimationFrame(draw);
-        }
-
-        draw();
-    </script>
-</section>

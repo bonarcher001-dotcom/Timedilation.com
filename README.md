@@ -120,44 +120,11 @@
     </section>
 
     <section class="card">
-        <h2>Velocity vs. Time Flow</h2>
-        <table>
-            <tr>
-                <th>Speed (% of Light)</th>
-                <th>Time for Moving Person</th>
-                <th>Time for Earth Observer</th>
-            </tr>
-            <tr>
-                <td>10%</td>
-                <td>1 Year</td>
-                <td>1.005 Years</td>
-            </tr>
-            <tr>
-                <td>50%</td>
-                <td>1 Year</td>
-                <td>1.15 Years</td>
-            </tr>
-            <tr>
-                <td>90%</td>
-                <td>1 Year</td>
-                <td>2.29 Years</td>
-            </tr>
-            <tr>
-                <td>99.9%</td>
-                <td>1 Year</td>
-                <td>22.37 Years</td>
-            </tr>
-        </table>
-    </section>
-</div>
+        
 
 <footer>
     <p>Physics Lab &copy; 2026 | Built for Future Physicists</p>
 </footer>
-
-<!-- MathJax for rendering the LaTeX formula -->
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </body>
 </html>

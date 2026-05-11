@@ -114,12 +114,13 @@
         </div>
         <p>Where:</p>
         <ul>
-            <li><strong>t:</strong> Time measured by the stationary observer (dilated time).</li>
-            <li><strong>t_0:</strong> Proper time (measured by the person moving).</li>
-            <li><strong>v:</strong> Velocity of the moving object.</li>
-            <li><strong>c:</strong> The speed of light.</li>
+            <li><strong>$t$:</strong> Time measured by the stationary observer (dilated time).</li>
+            <li><strong>$t_0$:</strong> Proper time (measured by the person moving).</li>
+            <li><strong>$v$:</strong> Velocity of the moving object.</li>
+            <li><strong>$c$:</strong> The speed of light.</li>
         </ul>
-
+    </section>
+    
 <section id="animation-container" style="text-align: center;">
     <h2>The Light Clock Experiment</h2>
     <p>Observe how light travels a longer, diagonal path when the clock is in motion. Because the speed of light cannot change, the clock must "tick" more slowly to cover that extra distance.</p>

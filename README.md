@@ -3,38 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Time Dilation | Special Relativity Explained</title>
-    <style>
-        :root {
-            --space-dark: #0b0d17;
-            --star-white: #f1f1f1;
-            --accent-blue: #4cc9f0;
-            --accent-purple: #7209b7;
-        }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.7;
-            color: var(--star-white);
-            background-color: var(--space-dark);
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        header {
-            text-align: center;
-            padding: 60px 0;
-            background: linear-gradient(135deg, #0b0d17 0%, #1a1c2c 100%);
-        }
-        h1 {
-            font-size: 3rem;
-            margin: 0;
-            color: var(--accent-blue);
-            text-transform: uppercase;
-            letter-spacing: 4px;
-     <style>
+   <style>
     :root {
         --space-dark: #0b0d17;
         --star-white: #f1f1f1;
@@ -115,6 +84,9 @@
         padding: 40px;
         font-size: 0.8rem;
         opacity: 0.6;
+    }
+</style>
+       
     }
 </style>
         }

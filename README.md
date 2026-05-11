@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -119,39 +119,7 @@
             <li><strong>$v$:</strong> Velocity of the moving object.</li>
             <li><strong>$c$:</strong> The speed of light.</li>
         </ul>
-    </section>
 
-    <section class="card">
-        <h2>Velocity vs. Time Flow</h2>
-        <table>
-            <tr>
-                <th>Speed (% of Light)</th>
-                <th>Time for Moving Person</th>
-                <th>Time for Earth Observer</th>
-            </tr>
-            <tr>
-                <td>10%</td>
-                <td>1 Year</td>
-                <td>1.005 Years</td>
-            </tr>
-            <tr>
-                <td>50%</td>
-                <td>1 Year</td>
-                <td>1.15 Years</td>
-            </tr>
-            <tr>
-                <td>90%</td>
-                <td>1 Year</td>
-                <td>2.29 Years</td>
-            </tr>
-            <tr>
-                <td>99.9%</td>
-                <td>1 Year</td>
-                <td>22.37 Years</td>
-            </tr>
-        </table>
-    </section>
-</div>
 
 <footer>
     <p>Physics Lab &copy; 2026 | Built for Future Physicists</p>

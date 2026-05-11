@@ -34,14 +34,89 @@
             color: var(--accent-blue);
             text-transform: uppercase;
             letter-spacing: 4px;
-        }
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
+     <style>
+    :root {
+        --space-dark: #0b0d17;
+        --star-white: #f1f1f1;
+        --accent-blue: #4cc9f0;
+        --accent-purple: #7209b7;
+    }
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.7;
+        color: var(--star-white);
+        background-color: var(--space-dark);
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+    header {
+        text-align: center;
+        padding: 60px 0;
+        background: linear-gradient(135deg, #0b0d17 0%, #1a1c2c 100%);
+    }
+    h1 {
+        font-size: 3rem;
+        margin: 0;
+        color: var(--accent-blue);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+    /* Updated Card: Removed the white tint to match background */
+    .card {
+        background: var(--space-dark); 
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    h2 {
+        color: var(--accent-blue);
+        border-left: 4px solid var(--accent-purple);
+        padding-left: 15px;
+    }
+    .formula-box {
+        background: #000;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 1.4rem;
+        border: 1px solid var(--accent-purple);
+        margin: 20px 0;
+    }
+    .highlight {
+        color: var(--accent-blue);
+        font-weight: bold;
+    }
+    /* Table Styling: Transparent background to show the dark site color */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background-color: transparent; 
+    }
+    th, td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--star-white); /* Ensures text is visible */
+    }
+    th { 
+        color: var(--accent-blue); 
+        background-color: rgba(255, 255, 255, 0.03); /* Very subtle header contrast */
+    }
+    footer {
+        text-align: center;
+        padding: 40px;
+        font-size: 0.8rem;
+        opacity: 0.6;
+    }
+</style>
         }
         h2 {
             color: var(--accent-blue);

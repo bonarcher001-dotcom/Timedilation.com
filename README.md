@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
     <style>
         :root {
             --space-dark: #0b0d17;
-            --star-white: #f1f1f1;
+            --star-white: #000000;
             --accent-blue: #4cc9f0;
             --accent-purple: #7209b7;
         }

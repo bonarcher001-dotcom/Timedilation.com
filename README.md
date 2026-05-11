@@ -220,6 +220,13 @@
     </section>
 
     <section class="card">
+    <ul>
+            <li><strong>$t$:</strong> Time measured by the stationary observer (dilated time).</li>
+            <li><strong>$t_0$:</strong> Proper time (measured by the person moving).</li>
+            <li><strong>$v$:</strong> Velocity of the moving object.</li>
+            <li><strong>$c$:</strong> The speed of light.</li>
+        </ul>
+        
         <h2>Velocity vs. Time Flow</h2>
         <table>
             <tr>

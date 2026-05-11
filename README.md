@@ -101,4 +101,71 @@
         <p>Imagine a clock that works by bouncing a beam of light between two mirrors. One "tick" is the time it takes for light to go up and down.</p>
         <ul>
             <li><strong>At Rest:</strong> The light travels a straight vertical path.</li>
+            <li><strong>In Motion:</strong> To an outside observer, the light must travel a <span class="highlight">diagonal path</span> to catch up with the moving mirrors.</li>
+        </ul>
+        <p>Since the speed of light ($c$) is constant and the diagonal path is longer, the clock <em>must</em> take more time to complete one tick. Thus, time stretches!</p>
+    </section>
+
+    <section class="card">
+        <h2>The Math</h2>
+        <p>We use the Lorentz Factor ($\gamma$) to calculate exactly how much time dilates:</p>
+        <div class="formula-box">
+            $$t = \frac{t_0}{\sqrt{1 - \frac{v^2}{c^2}}}$$
+        </div>
+        <p>Where:</p>
+        <ul>
+            <li><strong>$t$:</strong> Time measured by the stationary observer (dilated time).</li>
+            <li><strong>$t_0$:</strong> Proper time (measured by the person moving).</li>
+            <li><strong>$v$:</strong> Velocity of the moving object.</li>
+            <li><strong>$c$:</strong> The speed of light.</li>
+        </ul>
+    </section>
+
+    <section class="card">
+        <h2>Velocity vs. Time Flow</h2>
+        <table>
+            <tr>
+                <th>Speed (% of Light)</th>
+                <th>Time for Moving Person</th>
+                <th>Time for Earth Observer</th>
+            </tr>
+            <tr>
+                <td>10%</td>
+                <td>1 Year</td>
+                <td>1.005 Years</td>
+            </tr>
+            <tr>
+                <td>50%</td>
+                <td>1 Year</td>
+                <td>1.15 Years</td>
+            </tr>
+            <tr>
+                <td>90%</td>
+                <td>1 Year</td>
+                <td>2.29 Years</td>
+            </tr>
+            <tr>
+                <td>99.9%</td>
+                <td>1 Year</td>
+                <td>22.37 Years</td>
+            </tr>
+        </table>
+    </section>
+</div>
+
+<footer>
+    <p>Physics Lab &copy; 2026 | Built for Future Physicists</p>
+</footer>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</body>
+</html>
+
+    <section class="card">
+        <h2>The Light Clock Experiment</h2>
+        <p>Imagine a clock that works by bouncing a beam of light between two mirrors. One "tick" is the time it takes for light to go up and down.</p>
+        <ul>
+            <li><strong>At Rest:</strong> The light travels a straight vertical path.</li>
             <li><strong>In Motion:</strong> To an outside observer, the light must travel a
